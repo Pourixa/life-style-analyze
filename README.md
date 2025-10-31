@@ -9,7 +9,7 @@ I implemented each algorithm from scratch and compared the results to `scikit-le
 
 First I plotted the data — see the figure below:
 
-![graphs](img/Figure 1.png)
+![graphs](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%201.png)
 
 The relationship between BMI and weight, calories, and fat percentage looks roughly linear. So I started with linear regression, the simplest algorithm.
 
@@ -141,15 +141,15 @@ def linear_regression_gradient_descent(x:np.ndarray,y:np.ndarray,w_i:float=0,b_i
 
 Here is the cost function plotted over iterations using my model:
 
-![graph](img/Figure 2.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%202.png)
 
 Below are the regression lines for BMI versus fat percentage, calories, and weight:
 
-![graph](img/Figure 3.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%203.png)
 
 I also trained a `scikit-learn` model — the results match closely:
 
-![graph](img/Figure 4.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%204.png)
 
 ---
 
@@ -231,17 +231,17 @@ def multiple_linear_regression_gradient_descent(*x:np.ndarray,y:np.ndarray,w_i:f
 
 Cost curve:
 
-![graph](img/Figure 5.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%205.png)
 
 This worked well for two features. For visualization I removed one feature so I could plot the surface:
 
-![graph](img/Figure 6.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%206.png)
 
-![graph](img/Figure 7.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%207.png)
 
 The fit looks solid. I compared it to `scikit-learn` — to show both surfaces I reduced the opacity of the `sklearn` surface so the two overlap visibly (black = my model, blue = sklearn):
 
-![img](img/Figure 8.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%208.png)
 
 ---
 
@@ -337,15 +337,15 @@ def polynomial_regression_gradient_descent(*x:tuple,y:np.ndarray,w_i:float=0,b_i
 
 Cost curve:
 
-![graph](img/Figure 9.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%209.png )
 
 For visualization I removed one feature:
 
-![graph](img/Figure 10.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2010.png)
 
 Then I compared to `scikit-learn`:
 
-![graph](img/Figure 11.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2011.png)
 
 My polynomial implementation didn’t line up as closely as the other algorithms — I suspect a bug in my implementation and will try to fix it later.
 
@@ -357,7 +357,7 @@ Finally, I implemented logistic regression. I created a toy example to predict g
 
 Here’s the plot of the data:
 
-![graph](img/Figure 12.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2012.png)
 
 I also plotted what would happen if I used linear regression for this problem.
 
@@ -456,16 +456,16 @@ def logistic_regression_gradient_descent(*x:tuple,y:np.ndarray,w_i:float=0,b_i:f
 
 The cost curve:
 
-![graph](img/Figure 13.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2013.png)
 
 It doesn’t flatten completely even after many iterations (I ran gradient descent 10,000 times with a learning rate of `0.1`).
 
 Here is the decision boundary and the sigmoid function:
 
-![graph](img/Figure 14.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2014.png)
 
 Finally, I compared my result with `scikit-learn`:
 
-![graph](img/Figure 15.png)
+![graph](https://github.com/Pourixa/life-style-analyze/blob/40c1a50cff11674ffa2de595fba79d9b8b337bcf/img/Figure%2015.png)
 
 There isn’t a huge difference; `sklearn` produced a slightly better decision boundary, but the results are comparable.
